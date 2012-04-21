@@ -3,3 +3,15 @@ in initrdreplace/ are files which will replace the ones in the stock initramfs..
 we definitely have modified *rc 
 also use binary init built from source (will pass all the arguments to insmod for example)
 
+
+usage is simple, just execute
+./rebuild-image.sh
+
+it will generate ./boot-custom.img
+
+from kernel specified in USEKERNEL (default is the stock ce kernel)
+from stock ramdisk, modified (replaced) with content from initrdreplace
+
+in initrdreplace the files are from
+https://github.com/CyanogenModXT720/android_device_motorola_sholest/tree/pesh-modif/prebuilt/etc/rootfs
+
