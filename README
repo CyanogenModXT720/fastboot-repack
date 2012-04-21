@@ -1,0 +1,5 @@
+in initrdreplace/ are files which will replace the ones in the stock initramfs...
+
+we definitely have modified *rc 
+also use binary init built from source (will pass all the arguments to insmod for example)
+
