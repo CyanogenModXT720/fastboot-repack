@@ -24,6 +24,14 @@ loglevel 3
     export TERMINFO /system/etc/terminfo
     export ANDROID_DNS_MODE local
 
+# inject googides which are doned by sh_hijack, as we bypass it now
+
+    exec /system/xbin/busybox echo "msc_adb" > /dev/usb_device_mode
+    exec /system/xbin/busybox touch /tmp/usbd-state
+    exec /system/xbin/busybox chown system.system /tmp/usbd-state
+    exec /system/xbin/busybox echo -n "usb_mode_ngp_adb" > /tmp/usbd-state
+
+
 # Backward compatibility
     symlink /system/etc /etc
     symlink /sys/kernel/debug /d
