@@ -64,24 +64,24 @@ chown mot_usb mot_usb /dev/usb_device_mode
 chown mot_usb mot_usb /proc/mtpctl
 
 # Install kernel modules
-    insmod /system/lib/modules/twofish_common.ko
-    insmod /system/lib/modules/twofish.ko
-    insmod /system/lib/modules/dm-mod.ko
-    insmod /system/lib/modules/dm-crypt.ko
+    #insmod /system/lib/modules/twofish_common.ko
+    #insmod /system/lib/modules/twofish.ko
+    #insmod /system/lib/modules/dm-mod.ko
+    #insmod /system/lib/modules/dm-crypt.ko
 
 # Install BP related kernel modules
     #Start the engine modules for netmux first for other daemons depends on it
-    insmod /system/lib/modules/netmux.ko
-    insmod /system/lib/modules/netmux_linkdriver.ko
+    insmod /netmux.ko
+    insmod /netmux_linkdriver.ko
     insmod /system/lib/modules/sim.ko
-    insmod /system/lib/modules/modem_pm_driver.ko
-    insmod /system/lib/modules/sec.ko
+    insmod /modem_pm_driver.ko
+    insmod /sec.ko
 
 # Install custom kernel modules
-    insmod /system/lib/modules/crc16.ko
-    insmod /system/lib/modules/mbcache.ko
-    insmod /system/lib/modules/jbd2.ko
-    insmod /system/lib/modules/ext4.ko
+    #insmod /system/lib/modules/crc16.ko
+    #insmod /system/lib/modules/mbcache.ko
+    #insmod /system/lib/modules/jbd2.ko
+    #insmod /system/lib/modules/ext4.ko
 
     #insmod /system/lib/modules/symsearch.ko
     #insmod /system/lib/modules/cpufreq_conservative.ko
